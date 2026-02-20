@@ -1,0 +1,61 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#bgGrad)"/>
+
+  <!-- Outer glow ring -->
+  <circle cx="100" cy="100" r="88" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" fill="none"/>
+
+  <!-- Left half arc (solid) -->
+  <path d="M100 36 C67 36, 44 65, 44 100 C44 135, 67 164, 100 164"
+    stroke="white" stroke-width="7" stroke-linecap="round" fill="none" opacity="1"/>
+
+  <!-- Right half arc (dashed = reflection) -->
+  <path d="M100 36 C133 36, 156 65, 156 100 C156 135, 133 164, 100 164"
+    stroke="white" stroke-width="7" stroke-linecap="round"
+    stroke-dasharray="14 10" fill="none" opacity="0.55"/>
+
+  <!-- Center vertical axis line -->
+  <line x1="100" y1="32" x2="100" y2="168"
+    stroke="white" stroke-width="3" opacity="0.25" stroke-linecap="round"/>
+
+  <!-- 4 perspective dots -->
+  <!-- Devil (red) - top left -->
+  <circle cx="68" cy="68" r="10" fill="#f87171"/>
+  <circle cx="68" cy="68" r="10" fill="url(#glowRed)" opacity="0.6"/>
+
+  <!-- Expand (green) - top right -->
+  <circle cx="132" cy="68" r="10" fill="#34d399"/>
+  <circle cx="132" cy="68" r="10" fill="url(#glowGreen)" opacity="0.6"/>
+
+  <!-- Weakness (yellow) - bottom left -->
+  <circle cx="68" cy="132" r="10" fill="#fbbf24"/>
+  <circle cx="68" cy="132" r="10" fill="url(#glowYellow)" opacity="0.6"/>
+
+  <!-- Wildcard (blue) - bottom right -->
+  <circle cx="132" cy="132" r="10" fill="#60a5fa"/>
+  <circle cx="132" cy="132" r="10" fill="url(#glowBlue)" opacity="0.6"/>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3730a3"/>
+      <stop offset="50%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <radialGradient id="glowRed" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGreen" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowYellow" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBlue" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
