@@ -28,7 +28,18 @@ export default function Home() {
         body: JSON.stringify({ thought }),
       });
 
-      if (!res.ok) throw new Error("API request failed");
+      if (!res.ok) {
+        let message = `API request failed (${res.status})`;
+        try {
+          const data = await res.json();
+          if (typeof data?.error === "string" && data.error.trim()) {
+            message = data.error;
+          }
+        } catch {
+          // Fallback to default status-based message when body is not JSON.
+        }
+        throw new Error(message);
+      }
 
       const reader = res.body?.getReader();
       const decoder = new TextDecoder();
